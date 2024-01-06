@@ -1,22 +1,10 @@
-
 const config = require('../public/config')
 const writeBat = require('./lib/write_bat')
 const registryTable = require('./lib/registry_table')
 const openChrome = require('./lib/open_chrome')
 const checkRegistryKey = require('./lib/check_registry_keys')
-const fs = require('fs').promises;  
-  
-async function readConfigFile(filePath) {  
-  try {  
-    const data = await fs.readFile(filePath, 'utf8');  
-    const config = JSON.parse(data);  
-    return config;  
-  } catch (err) {  
-    throw err;  
-  }  
-}  
+
 ;(async function main() {
-    // const config = await readConfigFile(process.cwd() + '/config.json')
     if(config.openWay === 'bat'){
         // 写入bat文件
         writeBat(config)

@@ -5,10 +5,15 @@
   "main": "./src/main.js",
   "scripts": {
     "start": "node ./src/main.js",
-    "build": "pkg -t node16-win --output Chromelauncher --compress GZip  ./src/main.js",
+    "build": "pkg -t node16-win --output ./package/Chromelauncher --compress GZip  ./src/main.js && npm run sign",
+    "sign": "node ./src/rcedit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "pkg": "^5.8.1",
+    "rcedit": "^4.0.1"
+  }
 }
