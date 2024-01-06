@@ -1,0 +1,7 @@
+{
+    "openWay": "exe",
+    "registryTableOptions": {
+        "protocol": "zopenchrome",
+        "hive": "hkcu"
+    }
+}
